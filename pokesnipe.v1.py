@@ -15,7 +15,7 @@ vip_lists = ['Gyarados', 'Lapras', 'Vaporeon', 'Exeggutor', 'Omastar', 'Snorlax'
 vvip_lists = ['Gyarados', 'Lapras', 'Vaporeon', 'Exeggutor', 'Omastar', 'Snorlax',
               'Dragonite', 'Venusaur', 'Vileplume', 'Victreebel', 'Machamp', 'Cloyster'
               'Slowbro', 'Charizard', 'Blastoise', 'Nidoking', 'Nidoqueen', 'Wigglytuff',
-              'Arcanine', 'Kadabra', 'Alakazam', 'Dewgong', 'Muk', 'Gengar',
+              'Kadabra', 'Alakazam', 'Dewgong', 'Muk', 'Gengar',
               'Hypno', 'Kangaskhan', 'Drowzee', 'Omastar', 'Weezing']
 
 hdr = {
