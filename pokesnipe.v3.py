@@ -13,10 +13,11 @@ vip_lists = ['Gyarados', 'Lapras', 'Vaporeon', 'Exeggutor', 'Omastar', 'Snorlax'
               'Hypno', 'Kangaskhan', 'Bellsprout', 'Bulbasaur', 'Dratini', 'Drowzee', 'Exeggcute',
               'Oddish', 'Omanyte', 'Scyther', 'Seel', 'Slowpoke', 'Vulpix', 'Weezing']
 
-vvip_lists = ['Alakazam', 'Arcanine', 'Blastoise', 'Charizard', 'Cloyster', 'Dewgong', 
-              'Dragonite', 'Drowzee', 'Exeggutor', 'Gengar', 'Gyarados', 'Hypno', 'Kadabra', 
-              'Kangaskhan', 'Lapras', 'Machamp', 'Muk', 'Nidoking', 'Nidoqueen', 'Omastar', 'Slowbro',  
-              'Snorlax', 'Vaporeon', 'Venusaur', 'Victreebel', 'Vileplume', 'Weezing', 'Wigglytuff']
+vvip_lists = ['Gyarados', 'Lapras', 'Vaporeon', 'Exeggutor', 'Omastar', 'Snorlax',
+              'Dragonite', 'Venusaur', 'Vileplume', 'Victreebel', 'Machamp', 'Cloyster'
+              'Slowbro', 'Charizard', 'Blastoise', 'Nidoking', 'Nidoqueen', 'Wigglytuff',
+              'Arcanine', 'Kadabra', 'Alakazam', 'Dewgong', 'Muk', 'Gengar',
+              'Hypno', 'Kangaskhan', 'Drowzee', 'Omastar', 'Weezing']
 
 hdr = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36',
@@ -59,6 +60,20 @@ def get_pokesniper(url):
             iv = url_list['iv']
             wlist.append({'name': name, 'coords': coords, 'iv': iv})
     return(wlist)
+
+def get_pokepoops(url)
+    wlist = []
+    url_response = urllib2.urlopen(url)
+    url_lists = json.loads((url_response.readlines()[0]))
+    for url_list in url_lists:
+        if url_list['Name'] in vvip_lists:
+            name = url_list['Name']
+            iv = url_list['IV']
+            coords = url_list['Lat']+','+url_list['Lon']
+            wlist.append({'name': name, 'coords': coords, 'iv': iv})
+    return(wlist)
+
+
 
 #print(get_pogosniper('http://pogosniper.org/newapiman.txt'))
 #print(get_pokesniper('http://pokesnipers.com/api/v1/pokemon.json'))
